@@ -23,6 +23,22 @@
     <li>3</li>
 </ul> */
 
+// ! способ с рекурсией
+
+// const arr = [1, 2, [1, 2, 3, 4], 3, [1, 2], 4, 5];
+
+// function generateList(arr) {
+//     const ul = document.createElement('ul');
+
+//     arr.forEach(item => {
+//         const li = document.createElement('li');
+//         Array.isArray(item) ? li.append(generateList(item)) : li.innerText = item;
+//         ul.append(li);
+//     });
+//     return ul;
+// }
+
+// document.querySelector('body').append(generateList(arr));
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -38,7 +54,7 @@ function generateList(array2) {
 
             i.forEach(j => {
                 const liThird = document.createElement("li");
-                liThird.innerText = `1.${j}`;
+                liThird.innerText = j;
 
                 ulSecond.append(liThird);
                 liSecond.append(ulSecond);
